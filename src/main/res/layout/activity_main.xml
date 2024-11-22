@@ -7,26 +7,35 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" android:gravity="center">
-        <ScrollView
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="521dp"
-            >
-            <WebView
-                android:id="@+id/webViewMain"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </ScrollView>
-
-
-        <Button
-            android:id="@+id/loadButton"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Загрузить"/>
-    </LinearLayout>
+            android:orientation="vertical" android:gravity="center">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="358dp"
+                >
+                <WebView
+                    android:id="@+id/webViewMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </ScrollView>
 
+
+            <Button
+                android:id="@+id/loadButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Загрузить"/>
+            <EditText
+                android:imeOptions="flagNoExtractUi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/site"
+                android:id="@+id/URLEditText"/>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
